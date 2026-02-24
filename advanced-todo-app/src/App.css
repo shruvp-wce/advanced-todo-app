@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 450px;
+  padding: 25px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+/* Dark mode */
+.app.dark {
+  background: #1e1e1e;
+  color: white;
+}
+
+.app.dark input,
+.app.dark .todo-item {
+  background: #2c2c2c;
+  color: white;
+}
+
+.app.dark button {
+  background: #444;
+}
+
+.app.dark button:hover {
+  background: #666;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 22px;
+  color: #222;
+}
+
+.app.dark .header h1 {
+  color: white;
+}
+
+.theme-btn {
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+/* Input */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-section input[type="datetime-local"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.input-section button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.filters button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* Todo list */
+.todo-list {
+  list-style: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #f4f4f4;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.todo-item span {
+  flex: 1;
+}
+
+.todo-item span.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.todo-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 5px;
+}
+
+.empty-msg {
+  text-align: center;
+  opacity: 0.7;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 6px;
+  border-radius: 6px;
+}
